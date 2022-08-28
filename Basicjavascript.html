@@ -1,0 +1,271 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year:1,
+                gpa: 3.41,
+                born:2546,
+                help: true
+            },
+            {
+                fullname: 'นายส่งงาน ตรงเวลา',
+                age: 19,
+                year: 2,
+                gpa: 2.65,
+                born:2543,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 3.00,
+                born:2543,
+                help: true
+            },
+            {
+                fullname: 'นายน่ารัก ซื่อสัตย์',
+                age: 21,
+                year:4,
+                gpa: 2.21,
+                born:2542,
+                help:false
+            },
+
+            {
+                fullname: 'นางสาวโซคิ้ว สวยมาก',
+                age: 18,
+                year:1,
+                gpa: 2.99,
+                born:2546,
+                help:true
+            },
+            {
+                fullname: 'นายแดง เขียวชอุ่ม',
+                age: 19,
+                year: 3,
+                gpa: 3.75,
+                born:2544,
+                help:true
+            },
+        ]
+        for(let i=0;i<student.length;i++){
+            if (student[i].gpa >= 3.2 || (student[i].year > 1 && student[i].help == true &&student[i].gpa >= 2.75)){
+                console.log(student[i].fullname + 'เกิดเมื่อปี' +(student[i].born)+' ได้ทุนการศึกษา '+'เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+            else{
+                console.log(student[i].fullname + 'เกิดเมื่อปี' +(student[i].born)+' ไม่ได้ทุนการศึกษา '+'เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ได้ช่วยงานภาควิชาด้วย')
+                }
+       }
+        console.log("สรุปรายชื่อนักศึกษาที่ได้รับทุน ชั้นปีที่1-4")
+        console.log( 'ชั้นปีที่ 1')
+        for(let i=0;i<student.length;i++){
+            if(student[i].year==1){
+                if(student[i].gpa>=3.2){
+                    console.log(student[i].fullname + 'เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+            }
+        }
+        for(let j=2;j<5;j++){
+            console.log(" ชั้นปี "+j)
+            for(let i=0;i<student.length;i++){
+                if(student[i].year==j){
+                    if (student[i].gpa >= 3.2 || (student[i].year > 1 && student[i].help == true &&student[i].gpa >= 2.75)){
+                        console.log(student[i].fullname +'เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                        }
+                    else {
+                        console.log('ไม่มี')
+                    }
+            }
+        } 
+    }
+    
+    </script>
+
+
+</body>
+</html> 
+<!-- <html><head></head><body>
+    <script>
+        let student = [
+            {
+                fullname: 'ปังปอน',
+                age: 18,
+                year:1,
+                gpa: 3.21,
+                born :2546,
+                help:true
+                
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ2',
+                age: 19,
+                year: 2,
+                gpa: 3.21,
+                help: false
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ3',
+                age: 20,
+                year: 3,
+                gpa: 3.21,
+                help: true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ4',
+                age: 21,
+                year:4,
+                gpa: 3.21,
+                help:false
+            },
+
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸¥à¸ à¸”à¸¡à¸²1',
+                age: 18,
+                year:1,
+                gpa: 2.76,
+                help:true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸¥à¸ à¸”à¸¡à¸²2',
+                age: 19,
+                year: 2,
+                gpa: 2.76,
+                help:true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸¥à¸ à¸”à¸¡à¸²3',
+                age: 20,
+                year: 3,
+                gpa: 2.76,
+                help:true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¸•à¸¥à¸ à¸”à¸¡à¸²4',
+                age: 21,
+                year:4,
+                gpa: 2.76,
+                help:true
+            },
+
+            {
+                fullname: 'à¸™à¸²à¸‡à¸ªà¸²à¸§à¸”à¸µà¸‡à¸²à¸¡1',
+                age: 18,
+                year:1,
+                gpa: 2.76,
+                help:false
+            },
+            {
+                fullname: 'à¸™à¸²à¸‡à¸ªà¸²à¸§à¸”à¸µà¸‡à¸²à¸¡2',
+                age: 19,
+                year: 2,
+                gpa: 2.76,
+                help:false
+            },
+            {
+                fullname: 'à¸™à¸²à¸‡à¸ªà¸²à¸§à¸”à¸µà¸‡à¸²à¸¡3',
+                age: 20,
+                year: 3,
+                gpa: 2.76,
+                help:false
+            },
+            {
+                fullname: 'à¸™à¸²à¸‡à¸ªà¸²à¸§à¸”à¸µà¸‡à¸²à¸¡4',
+                age: 21,
+                year:4,
+                gpa: 2.76,
+                help:false
+            },
+
+            {
+                fullname: 'à¸™à¸²à¸¢à¹ƒà¸ˆ1',
+                age: 18,
+                year:1,
+                gpa: 2.75,
+                help:true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¹ƒà¸ˆ2',
+                age: 19,
+                year: 2,
+                gpa: 2.75,
+                help:true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¹ƒà¸ˆ3',
+                age: 20,
+                year: 3,
+                gpa: 2.75,
+                help:true
+            },
+            {
+                fullname: 'à¸™à¸²à¸¢à¹ƒà¸ˆ4',
+                age: 21,
+                year:4,
+                gpa: 2.75,
+                help:true
+            }
+        ]
+        for(let i=0;i<student.length;i++){
+            if(student[i].gpa>3.2){
+                if(student[i].help == true){
+                    console.log(student[i].fullname+' เกิดเมื่อปี '+(student[i].born)+' ได้ทุนการศึกษา '+'เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+                else{
+                    console.log(student[i].fullname+' à¹€à¸à¸´à¸”à¹€à¸¡à¸·à¹ˆà¸ à¸›à¸µ '+(2564-student[i].age)+' à¹„à¸”à¹‰à¸—à¸¸à¸™à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²')
+                }
+            }
+            else if(student[i].gpa>2.75 && student[i].help==true && student[i].year>1){
+                console.log(student[i].fullname+' à¹€à¸à¸´à¸”à¹€à¸¡à¸·à¹ˆà¸ à¸›à¸µ '+(2564-student[i].age)+' à¹„à¸”à¹‰à¸—à¸¸à¸™à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+            }
+            else if(student[i].gpa>2.75 && student[i].help==true && student[i].year<2){
+                console.log(student[i].fullname+' à¹€à¸à¸´à¸”à¹€à¸¡à¸·à¹ˆà¸ à¸›à¸µ '+(2564-student[i].age)+' à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸—à¸¸à¸™à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+            }
+            else if(student[i].gpa>2.75&& student[i].help==false ){
+                console.log(student[i].fullname+' à¹€à¸à¸´à¸”à¹€à¸¡à¸·à¹ˆà¸ à¸›à¸µ '+(2564-student[i].age)+' à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸—à¸¸à¸™à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+            }
+            else if(student[i].gpa<2.76&& student[i].help==true ){
+                console.log(student[i].fullname+' à¹€à¸à¸´à¸”à¹€à¸¡à¸·à¹ˆà¸ à¸›à¸µ '+(2564-student[i].age)+' à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸—à¸¸à¸™à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¹„à¸¡à¹ˆà¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸¢à¸±à¸‡à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+            }
+            else if(student[i].gpa<2.76&& student[i].help==false ){
+                console.log(student[i].fullname+' à¹€à¸à¸´à¸”à¹€à¸¡à¸·à¹ˆà¸ à¸›à¸µ '+(2564-student[i].age)+' à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸—à¸¸à¸™à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¹„à¸¡à¹ˆà¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+            }
+        }
+        console.log("à¸Šà¸±à¹‰à¸™à¸›à¸µà¸—à¸µà¹ˆ 1")
+        for(let i=0;i<student.length;i++){
+            if(student[i].year==1){
+                if(student[i].gpa>3.2 && student[i].help==false){
+                    console.log(student[i].fullname+' à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+                }
+                else if(student[i].gpa>3.2 && student[i].help==true){
+                    console.log(student[i].fullname+' à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+                }
+            }
+        }
+        for(let j=2;j<5;j++){
+            console.log("à¸Šà¸±à¹‰à¸™à¸›à¸µà¸—à¸µà¹ˆ "+j)
+            for(let i=0;i<student.length;i++){
+            if(student[i].year==j){
+                if(student[i].gpa>3.2 && student[i].help==false){
+                    console.log(student[i].fullname+' à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+                }
+                else if(student[i].gpa>3.2 && student[i].help==true){
+                    console.log(student[i].fullname+' à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+                }
+                else if(student[i].gpa>2.75 && student[i].help==true ){
+                    console.log(student[i].fullname+' à¹€à¸™à¸·à¹ˆà¸ à¸‡à¸ˆà¸²à¸à¹€à¸à¸£à¸”à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸–à¸¶à¸‡à¹€à¸à¸“à¸‘à¹Œà¹à¸¥à¸°à¸Šà¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸ à¸²à¸„à¸§à¸´à¸Šà¸²à¸”à¹‰à¸§à¸¢')
+                }
+            }
+        }
+    }
+    
+    </script>
+
+
+</body></html> -->
